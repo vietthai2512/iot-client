@@ -20,9 +20,9 @@ interface Props
 
 interface Patient
 {
-  device_id: string,
-  doctor_email: string,
-  heartrate_threshhold: number,
+  device_id?: string,
+  doctor_email?: string,
+  heartrate_threshhold?: number,
 }
 
 const Settings: React.FC<Props> = ({ deviceId }) =>
@@ -42,8 +42,8 @@ const Settings: React.FC<Props> = ({ deviceId }) =>
       return;
     }
     const data = res.data as Patient;
-    setDoctorEmail(data.doctor_email);
-    setHeartrateThreshhold(data.heartrate_threshhold);
+    setDoctorEmail(data?.doctor_email);
+    setHeartrateThreshhold(data?.heartrate_threshhold);
     setLoadingSetting(false);
   };
 
