@@ -100,6 +100,7 @@ const Settings: React.FC<Props> = ({ deviceId }) =>
                       doctor_email: values.doctorEmail,
                       heartrate_threshhold: values.heartrateThreshhold,
                     });
+                    await getPatientData();
                     setEditFees(false);
                     setSubmitting(false);
                   }}
