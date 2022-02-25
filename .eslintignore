@@ -1,0 +1,7 @@
+node_modules/
+dist
+**/scripts/*.js
+*.css
+*.svg
+*.png
+src/helpers/stellarHelper/transformTrezorTransaction.js
